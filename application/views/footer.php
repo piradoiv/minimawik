@@ -5,7 +5,7 @@
     <a href="http://www.mediavida.com/foro/dev/website-dare-v-the-hangover-478997" target="_blank">
       Website Dare V
     </a>
-    -
+    <span id="footerSeparator">-</span>
     <a href="#" class="btnEditPage">Edit this page</a>
   </div>
 
@@ -29,6 +29,7 @@
   -->
   <script src="/js/libs/gumby.min.js"></script>
   <script src="/js/plugins.js"></script>
+  <script src="/js/showdown.min.js"></script>
   <script src="http://rawgithub.com/ajaxorg/ace-builds/master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/main.js"></script>
 
