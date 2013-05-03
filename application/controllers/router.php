@@ -10,7 +10,7 @@ class Router extends CI_Controller {
     public function index()
     {
         $data['page_title'] = "Title";
-        $data['content']    = "Content here! :D";
+        $data['content']    = uri_string();
 
         $this->load->view('header', $data);
         $this->load->view('content', $data);
