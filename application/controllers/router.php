@@ -17,6 +17,7 @@ class Router extends CI_Controller {
         $data['page_title']  = "Title";
         $data['slug']        = uri_string();
         $data['content']     = '';
+        $data['markdown']    = '';
         $data['page_exists'] = false;
 
         $this->load->model('page_model');
@@ -42,23 +43,11 @@ class Router extends CI_Controller {
 
             return true;
         
-        // Create a page if doesn't exists
-        } elseif ($this->method === 'PUT') {
-            if ($data['page_exists'] === true) {
-                header('HTTP/1.0 400 Page already exists');
-                exit;
-            }
-
-            $page = new $this->page_model;
-            $page->title = $this->input->post('title', TRUE);
-            $page->markdown = $this->input->post('markdown', TRUE);
-            $page->save();
-
         // Update a page if exists
         } elseif ($this->method === 'POST') {
             if ($data['page_exists'] === false) {
-                header('HTTP/1.0 404 Page not found');
-                exit;
+                $page = new $this->page_model;
+                $page->slug = $data['slug'];
             }
 
             $page->title = $this->input->post('title', TRUE);
