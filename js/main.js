@@ -34,6 +34,7 @@ $(function() {
 
     $('.btnEditPage, a[title="Edit this page"]').on('click', function() {
         showEditor();
+        updateDocument(editor.getValue());
         return false;
     });
 

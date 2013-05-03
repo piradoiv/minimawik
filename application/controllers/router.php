@@ -34,11 +34,24 @@ class Router extends CI_Controller {
         // MarkDown parser
         $parser = new dflydev\markdown\MarkdownParser();
 
+        // Assign database contents if page exists
         if ($page->exists()) {
             $data['page_exists'] = true;
             $data['page_title'] = $page->title;
             $data['markdown'] = $page->markdown;
             $data['content'] = $parser->transform($page->markdown);
+        
+        // Prepare 404 message if page doesn't exists
+        } else {
+            $data['page_title'] = 'Page not found';
+            $data['markdown'] = "
+This is the title of your page
+==============================
+
+Edit this text :)";
+
+            $data['content'] = '<h1>404</h1><h2>Whooops, page not found!</h2><p>But if you feel you can edit this page, just <a href="#" class="btnEditPage">edit it</a>! :)</p>';
+
         }
 
         // Recent updated pages
