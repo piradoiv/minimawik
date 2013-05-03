@@ -1,4 +1,8 @@
 
+  <div class="row" style="clear: both">
+    <a href="#" class="btnEditPage">Edit page</a>
+  </div>
+
   <!-- Grab Google CDN's jQuery, fall back to local if offline -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.9.1.min.js"><\/script>')</script>

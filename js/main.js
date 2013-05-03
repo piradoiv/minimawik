@@ -22,8 +22,35 @@ $(function() {
     editor.getSession().setMode("ace/mode/markdown");
 
     setTimeout(function() {
-        $('#editor').slideDown();
-    }, 2000);
+        $('#edition').slideDown();
+    }, 1000);
+
+    $('.btnEditPage').on('click', function() {
+        showEditor();
+        return false;
+    });
+
+    $('#btnCloseEditor').on('click', function() {
+        hideEditor();
+        return false;
+    });
 
 });
 
+function showEditor() {
+    $('#editor').css('display', 'inline');
+    $('#content').css('float', 'right');
+    $('#content').css('width', '50%');
+
+    $('.btnEditPage').hide();
+    $('#btnCloseEditor').show();
+}
+
+function hideEditor() {
+    $('#editor').css('display', 'none');
+    $('#content').css('float', 'left');
+    $('#content').css('width', '100%');
+
+    $('.btnEditPage').show();
+    $('#btnCloseEditor').hide();
+}

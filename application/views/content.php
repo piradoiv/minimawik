@@ -1,22 +1,23 @@
 
 <style type="text/css" media="screen">
     #editor { 
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: 500px;
+        min-height: 500px;
+        width: 49%;
+        float: left;
+        display: none;
+    }
+
+    #btnCloseEditor {
         display: none;
     }
 </style>
 
 <div class="container">
     <div class="row">
-        <div class="twelve columns" id="content">
-            <?= $content ?>
+        <div class="twelve columns">
+            <div id="editor"># fasdiofasdoihfasd</div>
+            <a id="btnCloseEditor" href="#">Close editor</a>
+            <div id="content"><?= $content ?></div>
         </div>
     </div>
 </div>
-
-
