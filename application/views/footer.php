@@ -1,6 +1,12 @@
 
+  <hr>
   <div class="row" style="clear: both">
-    <a href="#" class="btnEditPage">Edit page</a>
+    Proudly made by Pirado IV for 
+    <a href="http://www.mediavida.com/foro/dev/website-dare-v-the-hangover-478997" target="_blank">
+      Website Dare V
+    </a>
+    -
+    <a href="#" class="btnEditPage">Edit this page</a>
   </div>
 
   <!-- Grab Google CDN's jQuery, fall back to local if offline -->
