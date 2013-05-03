@@ -14,7 +14,7 @@ class Router extends CI_Controller {
 
     public function index()
     {
-        $data['page_title']  = "Title";
+        $data['page_title']  = "Untitled";
         $data['slug']        = uri_string();
         if ($data['slug'] === '') {
             $data['slug'] = '/';
@@ -35,6 +35,7 @@ class Router extends CI_Controller {
 
         if ($page->exists()) {
             $data['page_exists'] = true;
+            $data['page_title'] = $page->title;
             $data['markdown'] = $page->markdown;
             $data['content'] = $parser->transform($page->markdown);
         }
@@ -58,11 +59,9 @@ class Router extends CI_Controller {
             $page->markdown = $this->input->post('markdown', TRUE);
             $page->save();
 
+            return true;
         }
-
-
     }
-
 }
 
 /* End of file router.php */
