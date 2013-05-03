@@ -27,7 +27,7 @@ $(function() {
     editor.on('change', function(e) {
         updateDocument(editor.getValue());
         window.clearTimeout(Watchdog);
-        Watchdog = setTimeout(saveDocument, 3000);
+        Watchdog = setTimeout(saveDocument, 1500);
     });
 
     Editor = editor;
