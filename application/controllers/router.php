@@ -23,6 +23,7 @@ class Router extends CI_Controller {
         $data['content']     = '';
         $data['markdown']    = '';
         $data['page_exists'] = false;
+        $data['recent_pages'] = array();
 
         $this->load->model('page_model');
         $page = new $this->page_model;
@@ -39,6 +40,12 @@ class Router extends CI_Controller {
             $data['markdown'] = $page->markdown;
             $data['content'] = $parser->transform($page->markdown);
         }
+
+        // Recent updated pages
+        $recent_pages = new $this->page_model;
+        $recent_pages->order_by('id DESC')->limit(5)->select('title, slug');
+        $recent_pages->get();
+        $data['recent_pages'] = $recent_pages;
 
         // Show the page
         if($this->method === 'GET') {

@@ -1,12 +1,28 @@
 
   <div id="footer">
     <div class="row">
-      Proudly made by Pirado IV for 
-      <a href="http://www.mediavida.com/foro/dev/website-dare-v-the-hangover-478997" target="_blank">
-        Website Dare V
-      </a>
-      <span id="footerSeparator">-</span>
-      <a href="#" class="btnEditPage">Edit this page</a>
+      <div class="seven columns">
+        Proudly made by Pirado IV for 
+        <a href="http://www.mediavida.com/foro/dev/website-dare-v-the-hangover-478997" target="_blank">
+          Website Dare V
+        </a>
+        <span id="footerSeparator">-</span>
+        <a href="#" class="btnEditPage">Edit this page</a>
+      </div>
+
+      <div class="five columns">
+        <h4>Recent changed pages</h4>
+        <ul>
+        <?php foreach ($recent_pages as $page): ?>
+          <li>
+            <a href="<?= $page->slug ?>">
+              <?= $page->title ?>
+            </a>
+          </li>
+        <?php endforeach ?>
+        </ul>
+      </div>
+      
     </div>
   </div>
 
