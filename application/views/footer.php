@@ -11,7 +11,7 @@
       </div>
 
       <div class="five columns">
-        <h4>Recent changed pages</h4>
+        <h4>Recently changed pages</h4>
         <ul>
         <?php foreach ($recent_pages as $page): ?>
           <li>
