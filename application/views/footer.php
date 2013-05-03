@@ -16,9 +16,7 @@
   <!--
   Include gumby.js followed by UI modules.
   Or concatenate and minify into a single file
-  <script src="js/libs/gumby.js"></script>
   <script src="js/libs/ui/gumby.retina.js"></script>
-  <script src="js/libs/ui/gumby.fixed.js"></script>
   <script src="js/libs/ui/gumby.skiplink.js"></script>
   <script src="js/libs/ui/gumby.toggleswitch.js"></script>
   <script src="js/libs/ui/gumby.checkbox.js"></script>
@@ -27,8 +25,11 @@
   <script src="js/libs/ui/jquery.validation.js"></script>
   <script src="js/libs/gumby.init.js"></script>
   -->
-  <script src="/js/libs/gumby.min.js"></script>
+  <script src="js/libs/gumby.js"></script>
+  <script src="js/libs/ui/gumby.fixed.js"></script>
   <script src="/js/plugins.js"></script>
+  <script src="js/libs/gumby.init.js"></script>
+  
   <script src="/js/showdown.min.js"></script>
   <script src="http://rawgithub.com/ajaxorg/ace-builds/master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/main.js"></script>

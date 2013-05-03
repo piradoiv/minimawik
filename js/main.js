@@ -25,10 +25,6 @@ $(function() {
         updateDocument(editor.getValue());
     });
 
-    setTimeout(function() {
-        $('#edition').slideDown();
-    }, 1000);
-
     $('.btnEditPage, a[title="Edit this page"]').on('click', function() {
         showEditor();
         return false;
@@ -48,6 +44,8 @@ function showEditor() {
 
     $('.btnEditPage, #footerSeparator').hide();
     $('#btnCloseEditor').show();
+
+    Gumby.initialize('fixed');
 }
 
 function hideEditor() {
@@ -60,7 +58,12 @@ function hideEditor() {
 }
 
 function updateDocument(data) {
+    // Update contents
     var converter = new Showdown.converter();
     var html = converter.makeHtml(data);
     $('#content').html(html);
+
+    // Update title
+    var title = $('#content h1:first').html();
+    document.title = title;
 }
