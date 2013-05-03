@@ -55,6 +55,12 @@ class Router extends CI_Controller {
                 $page->slug = $data['slug'];
             }
 
+            $protected_pages = array('/', '/about');
+            if (in_array($data['slug'], $protected_pages)) {
+                header("HTTP/1.0 403 Forbidden");
+                exit;
+            }
+
             $page->title = $this->input->post('title', TRUE);
             $page->markdown = $this->input->post('markdown', TRUE);
             $page->save();
