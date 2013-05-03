@@ -1,0 +1,4 @@
+minimawik
+=========
+
+Markdown minimalistic wiki
