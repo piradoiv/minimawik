@@ -38,23 +38,26 @@ $(function() {
 });
 
 function showEditor() {
-    $('#editor').css('display', 'inline');
-    $('#content').css('float', 'right');
-    $('#content').css('width', '50%');
+    var editorLayer = $('#editorLayer');
+    var contentLayer = $('#contentLayer');
+    editorLayer.fadeIn();
+    contentLayer.removeClass('push_two');
 
-    $('.btnEditPage, #footerSeparator').hide();
-    $('#btnCloseEditor').show();
+    $('.btnEditPage, #footerSeparator').fadeOut();
+    $('#btnCloseEditor').fadeIn();
 
     Gumby.initialize('fixed');
 }
 
 function hideEditor() {
-    $('#editor').css('display', 'none');
-    $('#content').css('float', 'left');
-    $('#content').css('width', '100%');
+    var editorLayer = $('#editorLayer');
+    var contentLayer = $('#contentLayer');
+    editorLayer.fadeOut(function() {
+        contentLayer.addClass('push_two');
+    });
 
-    $('.btnEditPage, #footerSeparator').show();
-    $('#btnCloseEditor').hide();
+    $('.btnEditPage, #footerSeparator').fadeIn();
+    $('#btnCloseEditor').fadeOut();
 }
 
 function updateDocument(data) {

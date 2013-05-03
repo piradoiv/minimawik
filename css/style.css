@@ -4,9 +4,14 @@ However, this blank file is available if you prefer
 */
 
 #editor { 
-    min-height: 500px;
-    width: 49%;
-    float: left;
+    height: 275px;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    border-bottom-right-radius: 0px;
+    margin-top: 5px;
+}
+
+.hidden {
     display: none;
 }
 
