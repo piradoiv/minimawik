@@ -65,5 +65,9 @@ function updateDocument(data) {
 
     // Update title
     var title = $('#content h1:first').html();
+    if (title === undefined) {
+        title = "Untitled";
+    }
+
     document.title = title;
 }
