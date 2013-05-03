@@ -1,12 +1,13 @@
 
-  <hr>
-  <div class="row" style="clear: both">
-    Proudly made by Pirado IV for 
-    <a href="http://www.mediavida.com/foro/dev/website-dare-v-the-hangover-478997" target="_blank">
-      Website Dare V
-    </a>
-    <span id="footerSeparator">-</span>
-    <a href="#" class="btnEditPage">Edit this page</a>
+  <div id="footer">
+    <div class="row">
+      Proudly made by Pirado IV for 
+      <a href="http://www.mediavida.com/foro/dev/website-dare-v-the-hangover-478997" target="_blank">
+        Website Dare V
+      </a>
+      <span id="footerSeparator">-</span>
+      <a href="#" class="btnEditPage">Edit this page</a>
+    </div>
   </div>
 
   <!-- Grab Google CDN's jQuery, fall back to local if offline -->

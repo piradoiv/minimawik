@@ -36,7 +36,7 @@
   <!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
        However, there is a blank style.css in the css directory should you prefer -->
   <link rel="stylesheet" href="/css/gumby.css">
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/style.css">
 
   <script src="/js/libs/modernizr-2.6.2.min.js"></script>
 </head>
