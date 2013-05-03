@@ -56,7 +56,7 @@ Edit this text :)";
 
         // Recent updated pages
         $recent_pages = new $this->page_model;
-        $recent_pages->order_by('id DESC')->limit(5)->select('title, slug');
+        $recent_pages->order_by('updated_at DESC, id DESC')->limit(5)->select('title, slug');
         $recent_pages->get();
         $data['recent_pages'] = $recent_pages;
 
