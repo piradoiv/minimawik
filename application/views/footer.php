@@ -2,6 +2,7 @@
   <div id="footer">
     <div class="row">
       <div class="seven columns">
+        <h3><a href="/">MinimaWik</a></h3>
         Proudly made by Pirado IV for 
         <a href="http://www.mediavida.com/foro/dev/website-dare-v-the-hangover-478997" target="_blank">
           Website Dare V
