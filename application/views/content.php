@@ -1,17 +1,4 @@
 
-<style type="text/css" media="screen">
-    #editor { 
-        min-height: 500px;
-        width: 49%;
-        float: left;
-        display: none;
-    }
-
-    #btnCloseEditor {
-        display: none;
-    }
-</style>
-
 <div class="container">
     <div class="row">
         <div class="twelve columns">
