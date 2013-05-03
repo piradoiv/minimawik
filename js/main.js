@@ -19,13 +19,17 @@ $(function() {
     //alert('wowafeaf');
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/tomorrow_night_bright");
+    editor.getSession().setUseWrapMode(true);
     editor.getSession().setMode("ace/mode/markdown");
+    editor.on('change', function(e) {
+        updateDocument(editor.getValue());
+    });
 
     setTimeout(function() {
         $('#edition').slideDown();
     }, 1000);
 
-    $('.btnEditPage').on('click', function() {
+    $('.btnEditPage, a[title="Edit this page"]').on('click', function() {
         showEditor();
         return false;
     });
@@ -42,7 +46,7 @@ function showEditor() {
     $('#content').css('float', 'right');
     $('#content').css('width', '50%');
 
-    $('.btnEditPage').hide();
+    $('.btnEditPage, #footerSeparator').hide();
     $('#btnCloseEditor').show();
 }
 
@@ -51,6 +55,12 @@ function hideEditor() {
     $('#content').css('float', 'left');
     $('#content').css('width', '100%');
 
-    $('.btnEditPage').show();
+    $('.btnEditPage, #footerSeparator').show();
     $('#btnCloseEditor').hide();
+}
+
+function updateDocument(data) {
+    var converter = new Showdown.converter();
+    var html = converter.makeHtml(data);
+    $('#content').html(html);
 }
