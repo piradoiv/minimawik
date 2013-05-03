@@ -194,7 +194,7 @@ if (defined('ENVIRONMENT'))
 /**
  * Load Composer autoload library
  */
-require(BASEPATH."../vendor/autoload.php");
+#require(BASEPATH."../vendor/autoload.php");
 
 /*
  * --------------------------------------------------------------------
