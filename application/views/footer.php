@@ -7,8 +7,9 @@
         <a href="http://www.mediavida.com/foro/dev/website-dare-v-the-hangover-478997" target="_blank">
           Website Dare V
         </a>
-        <span id="footerSeparator">-</span>
-        <a href="#" class="btnEditPage">Edit this page</a>
+        <p>
+          <a href="#" class="btnEditPage">Edit this page!</a>
+        </p>
       </div>
 
       <div class="five columns">

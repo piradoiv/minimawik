@@ -50,7 +50,7 @@ function showEditor() {
     editorLayer.fadeIn();
     contentLayer.removeClass('push_two');
 
-    $('.btnEditPage, #footerSeparator').fadeOut();
+    $('.btnEditPage').fadeOut();
     $('#btnCloseEditor').fadeIn();
 
     Gumby.initialize('fixed');
@@ -63,7 +63,7 @@ function hideEditor() {
         contentLayer.addClass('push_two');
     });
 
-    $('.btnEditPage, #footerSeparator').fadeIn();
+    $('.btnEditPage').fadeIn();
     $('#btnCloseEditor').fadeOut();
 
 }
