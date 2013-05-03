@@ -13,21 +13,10 @@
 
 <div class="container">
     <div class="row">
-        <div class="twelve columns">
-            <div id="editable">
-                <?= $content ?>
-                <div id="editor">
-# Ola k ase?
-En un lugar de La Mancha de cuyo nombre no quiero acordarme...
-* * *
-
-1. Sopadé
-2. Patatascon
-3. 
-                </div>
-            </div>
+        <div class="twelve columns" id="content">
+            <?= $content ?>
         </div>
     </div>
 </div>
 
-<script src="http://rawgithub.com/ajaxorg/ace-builds/master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+

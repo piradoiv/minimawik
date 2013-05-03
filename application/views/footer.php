@@ -19,6 +19,7 @@
   -->
   <script src="/js/libs/gumby.min.js"></script>
   <script src="/js/plugins.js"></script>
+  <script src="http://rawgithub.com/ajaxorg/ace-builds/master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/main.js"></script>
 
   <!-- Change UA-XXXXX-X to be your site's ID -->

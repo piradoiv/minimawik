@@ -9,8 +9,9 @@ class Wop extends CI_Controller {
 
     public function index()
     {
-        $markdown = new dflydev\markdown\MarkdownParser();
-        $data['content'] = $markdown->transformMarkdown("#ola k ase?");
+        #$markdown = new dflydev\markdown\MarkdownParser();
+        #$data['content'] = $markdown->transformMarkdown("#ola k ase?");
+        $data['content'] = "Content here! :)";
 
         $this->load->view('header');
         $this->load->view('content', $data);
