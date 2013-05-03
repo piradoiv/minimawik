@@ -13,6 +13,9 @@ Gumby.oldie(function() {
 	console.log("Oldie");
 });
 
+var Editor,
+    Watchdog;
+
 // Document ready
 $(function() {
 
@@ -23,7 +26,11 @@ $(function() {
     editor.getSession().setMode("ace/mode/markdown");
     editor.on('change', function(e) {
         updateDocument(editor.getValue());
+        window.clearTimeout(Watchdog);
+        Watchdog = setTimeout(saveDocument, 3000);
     });
+
+    Editor = editor;
 
     $('.btnEditPage, a[title="Edit this page"]').on('click', function() {
         showEditor();
@@ -58,6 +65,7 @@ function hideEditor() {
 
     $('.btnEditPage, #footerSeparator').fadeIn();
     $('#btnCloseEditor').fadeOut();
+
 }
 
 function updateDocument(data) {
@@ -73,4 +81,17 @@ function updateDocument(data) {
     }
 
     document.title = title;
+}
+
+function saveDocument() {
+    console.log("Storing document...");
+    var data = {
+        title: $('#content h1:first').html(),
+        markdown: Editor.getValue()
+    };
+
+    $.post(document.URL, data, function(success) {
+        console.log(success);
+        console.log("Document saved");
+    });
 }
