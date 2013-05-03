@@ -38,10 +38,9 @@
 |
 */
 
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'router';
 $route['404_override']       = '';
 
-$route['api']                = 'api';
 $route[':any']               = 'router';
 
 
