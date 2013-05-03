@@ -16,6 +16,10 @@ class Router extends CI_Controller {
     {
         $data['page_title']  = "Title";
         $data['slug']        = uri_string();
+        if ($data['slug'] === '') {
+            $data['slug'] = '/';
+        }
+
         $data['content']     = '';
         $data['markdown']    = '';
         $data['page_exists'] = false;
