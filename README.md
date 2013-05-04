@@ -1,6 +1,5 @@
 MinimaWik
 ==============================
-
 MinimaWik is a Wiki system with some cool features, like real-time editing, previewing and saving (the content is auto-saved 1.5 seconds after you stop writing).
 
 The system has been written on top of [CodeIgniter](http://www.codeigniter.com/) Framework, usign [DataMapper ORM](http://datamapper.wanwizard.org/) for the Database queries.
@@ -15,6 +14,13 @@ There are lots of other technologies involved, so thank you very much to:
 4. [MediaVida](http://www.mediavida.com/) forums
 
 Don't hesitate in contacting me for any questions you have, suggestions or just to say hello, I'm [@PiradoIV](http://twitter.com/PiradoIV) on Twitter.
+
+License
+-------
+http://opensource.org/licenses/BSD-3-Clause
+
+Live demo
+---------
 
 Oh, and take a look to this live demo:<br />
 [minimawik.piradoiv.com](http://minimawik.piradoiv.com/)
