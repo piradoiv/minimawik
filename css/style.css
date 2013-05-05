@@ -25,6 +25,16 @@ However, this blank file is available if you prefer
     padding: 15px 0px;
 }
 
+.container h1 {
+    line-height: 1.1;
+    font-size: 70px;
+}
+
+.container p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
 body {
     background-color: rgb(36, 36, 36);
     color: #fff;
